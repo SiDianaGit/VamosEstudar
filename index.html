@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vamos Resumir</title>
+</head>
+<body>
+    <header>
+        <h1>Criando resumos para estudo</h1> 
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#Disciplina">Disciplina</a></li>
+                <li><a href="#MateriaResumo">Matéria Resumo</a></li>
+                <li><a href="#MateriaQuestao">Questionário</a></li>
+                <li><a href="#MateriaGabarito">Gabarito</a></li>
+            </ul>
+        </nav>
+
+        <section id="Disciplina">
+            <label for="selectDisciplina">Escolha a disciplina:</label>
+            <select id="selectDisciplina" onclick="limparSessoes()"> 
+                <option value="ciencias">Ciências</option>                        
+                <option value="portugues">Português</option> 
+                <option value="geografia">Geografia</option> 
+            </select>
+            <p>Selecione a disciplina que deseja gerar um resumo de estudos.</p>
+
+
+        </section>
+
+        <section id="MateriaResumo">
+            <h2>Qual Matéria deseja estudar?</h2>
+            <input type="text" id="inputMateria" placeholder="Informe a matéria que deseja estudar">
+
+            <button onclick="pesquisaResumo()">Buscar Resumo</button>
+            <section class="resultado" id="resultado-resumo"></section>
+        </section>
+
+        <section id="MateriaQuestao">
+            <button onclick="pesquisaQuestionario()">Buscar Questões</button>
+            <section class="resultado" id="resultado-questoes"></section>
+        </section>
+
+        <section id="MateriaGabarito">
+            <button onclick="pesquisaGabarito()">Buscar Gabarito</button>
+            <section class="resultado" id="resultado-gabarito"></section>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>2024 - Resumos. Todos os direitos reservados</p>
+        <p>Entre em contato pelo email: si_ap@hotmail.com</p>
+    </footer>
+
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
